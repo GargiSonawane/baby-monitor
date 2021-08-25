@@ -33,11 +33,13 @@ function draw(){
         }
     }
     if(objects.length = 0){
-        
+        alarm.play();
+        document.getElementById("is_baby_present").innerHTML = "Baby not detected"; 
     }
-
+}
 function modelLoaded(){
     console.log("model loaded");
+    status = true;
 }
 
 function gotResult(error, result){
